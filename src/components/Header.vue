@@ -12,9 +12,10 @@
       </div>
     </router-link>
     <div class="cart-link">
-      <router-link class="font-weight-bold text-light mr-3" to="/furniture">Tính năng</router-link>
-      <router-link class="font-weight-bold text-light mr-3" to="/decor">Về chúng tôi</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">About us</router-link>
       <span v-if="user.isConnected" class="dropdown show">
+          <img :src="user.picture"
+          height="40px">
         <a
           class="btn btn-info"
           href="#"
@@ -23,7 +24,6 @@
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
-           v-on:click="sendLogoutEvent"
         >{{ user.name }}</a>
 
         <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -35,7 +35,7 @@
         class="btn btn-primary font-weight-bold text-light mr-3"
         to="/login"
         exact
-      >Đăng nhập</router-link>
+      >Login</router-link>
     </div>
   </nav>
 </template>
@@ -80,6 +80,12 @@ nav {
   float: right;
   position: relative;
   bottom: 9px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .cart-link__count {
