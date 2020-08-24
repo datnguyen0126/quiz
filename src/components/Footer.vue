@@ -1,5 +1,5 @@
 <template>
-  <footer>Created by Dat nguyen</footer>
+  <footer>Created by Dat nguyen 2020</footer>
 </template>
 
 <script>

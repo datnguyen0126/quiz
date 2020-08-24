@@ -25,7 +25,7 @@ export default {
       user: (state) => state.user,
     }),
   },
-  method: {
+  methods: {
     ...mapActions({
       logout: "onLogout",
     }),

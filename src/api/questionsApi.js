@@ -38,8 +38,8 @@ const questions = [
 ]
 
 export default {
-    getQuestion (request) {
-      setTimeout(() => request(questions), 100)
+    getQuestion (callback) {
+      setTimeout(() => callback(questions), 100)
     },
 }
 
